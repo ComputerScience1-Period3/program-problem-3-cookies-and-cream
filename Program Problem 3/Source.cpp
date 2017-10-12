@@ -22,26 +22,32 @@ void pause() {
 void main() {
 	int someThreeDigitNumber;
 	cout << "Enter a three digit number : ";
-	cin >> someThreeDigitNumber;
+	cin >> someThreeDigitNumber; // This is where the three numbers are input by the user.
 	int A, B, C;
-	
-	A = someThreeDigitNumber / 100 ;
-	
-	B = (someThreeDigitNumber / 10) % 10;
-	
-	C = someThreeDigitNumber % 10;
 
-	if (A<B && B<C) { // check to see if ascending
-		
-		cout << "The number is ascending";
-	}
-	else if (A>B && B>C) { // check to see if descending
-		
-		cout << "The number is descending";
-	}
-	else if (A=B=C) { //check to see if neither
-		
-		cout << "The number is neither ascending nor descending" << endl;
+	for (int i = 0; i < 30; i++) {
+
+		A = someThreeDigitNumber / 100; // This is the first number.
+
+		B = (someThreeDigitNumber / 10) % 10; // This is the second number.
+
+		C = someThreeDigitNumber % 10; // This is the third number.
+
+		if (A<B && B<C) { // check to see if ascending
+
+			cout <<someThreeDigitNumber<<" is ascending. ";} // What is put out when the number is ascending.
+
+		else if (A>B && B>C) { // check to see if descending
+
+			cout <<someThreeDigitNumber<<" is descending. ";} // What is put out when the number is descending.
+
+		else { //check to see if neither
+
+			cout <<someThreeDigitNumber<<" is neither ascending nor descending. " << endl;}  // What is put out when the number is neither. 
+
+		cout << "Enter a three digit number : ";
+		cin >> someThreeDigitNumber; // This is where the three numbers are input by the user again.
+
 	}
 	pause(); // pauses to see the displayed text
 
