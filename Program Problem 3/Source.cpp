@@ -9,7 +9,7 @@ Create a project assuming that a completely trusthrowrthy and perfect user comes
 #include <conio.h> //gives access to _kbhit() and _getch() for pause()
 
 //namespaces
-using namespace std; //*
+using namespace std; 
 
 //functions()
 void pause() {
@@ -20,29 +20,30 @@ void pause() {
 }
 // main
 void main() {
-	int someThreeDigitNumber;
-	cout << "Enter a three digit number : ";
-	cin >> someThreeDigitNumber;
-	int A, B, C;
-	
-	A = someThreeDigitNumber / 100 ;
-	
-	B = (someThreeDigitNumber / 10) % 10;
-	
-	C = someThreeDigitNumber % 10;
+	for (int i = 0; i < 30; i++) {
+		int someThreeDigitNumber;
+		cout << "Enter a three digit number : ";
+		cin >> someThreeDigitNumber;
+		int A, B, C;
 
-	if (A<B && B<C) { // check to see if ascending
-		
-		cout << "The number is ascending";
-	}
-	else if (A>B && B>C) { // check to see if descending
-		
-		cout << "The number is descending";
-	}
-	else if (A=B=C) { //check to see if neither
-		
-		cout << "The number is neither ascending nor descending" << endl;
+		A = someThreeDigitNumber / 100;
+
+		B = (someThreeDigitNumber / 10) % 10;
+
+		C = someThreeDigitNumber % 10;
+
+		if (A < B && B < C) { // check to see if ascending
+
+			cout << someThreeDigitNumber << " is ascending." << endl;
+		}
+		else if (A > B && B > C) { // check to see if descending
+
+			cout << someThreeDigitNumber << " is descending." << endl;
+		}
+		else { //check to see if neither
+
+			cout << someThreeDigitNumber << " is neither ascending nor descending." << endl;
+		}
 	}
 	pause(); // pauses to see the displayed text
-
 }
