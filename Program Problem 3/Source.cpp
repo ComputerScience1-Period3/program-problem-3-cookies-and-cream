@@ -11,7 +11,7 @@ Create a project assuming that a completely trusthrowrthy and perfect user comes
 //namespaces
 using namespace std; //*
 
-//functions()
+					 //functions()
 void pause() {
 	cout << "Press any key to continue...";
 	while (!_kbhit());
@@ -20,29 +20,34 @@ void pause() {
 }
 // main
 void main() {
-	int someThreeDigitNumber;
-	cout << "Enter a three digit number : ";
-	cin >> someThreeDigitNumber;
-	int A, B, C;
-	
-	A = someThreeDigitNumber / 100 ;
-	
-	B = (someThreeDigitNumber / 10) % 10;
-	
-	C = someThreeDigitNumber % 10;
+	for (int i = 0; i < 30; i++){ // Repeats only 30 times
 
-	if (A<B && B<C) { // check to see if ascending
+		int someThreeDigitNumber; // The number the user inputs
+		cout << "Enter a three digit number: ";
+		cin >> someThreeDigitNumber;
+		int A, B, C;
+
+		A = someThreeDigitNumber / 100; // Defines the first digit
+
+		B = (someThreeDigitNumber / 10) % 10; //Defines the second digit
+
+		C = someThreeDigitNumber % 10; //Defines the third digit
 		
-		cout << "The number is ascending";
-	}
-	else if (A>B && B>C) { // check to see if descending
-		
-		cout << "The number is descending";
-	}
-	else if (A=B=C) { //check to see if neither
-		
-		cout << "The number is neither ascending nor descending" << endl;
-	}
+
+
+			if (A < B && B < C) { // check to see if ascending
+
+				cout << someThreeDigitNumber << " is ascending" << endl;
+			}
+			else if (A > B && B > C) { // check to see if descending
+
+				cout << someThreeDigitNumber << " is descending" << endl;
+			}
+			else if (A = B = C) { //check to see if neither
+				cout << someThreeDigitNumber << " is neither ascending nor descending" << endl;
+			}
+			}
+
 	pause(); // pauses to see the displayed text
-
+	// This program has been edited by Abhi Patel
 }
